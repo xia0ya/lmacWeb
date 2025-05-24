@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/macWeb/',
+  base: '/lmacWeb/',
   plugins: [
     vue(),
     vueDevTools(),
