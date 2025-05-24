@@ -107,7 +107,7 @@ const setWallpaper = () => {
     const savedWallpaper = localStorage.getItem('wallpaper') || '1';
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        desktop.style.backgroundImage = `url('wallpaper/assets/wallpaper/${savedWallpaper}.jpg')`;
+        desktop.style.backgroundImage = `url('/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg')`;
     }
 };
 
