@@ -100,9 +100,8 @@ const setWallpaper = () => {
     // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        // 使用 URL 构造函数构建完整路径
-        const baseUrl = new URL('/lmacWeb/', window.location.origin).href;
-        const wallpaperUrl = new URL(`assets/wallpaper/${savedWallpaper}.jpg`, baseUrl).href;
+        // 使用与图标相同的方式构建URL
+        const wallpaperUrl = `/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg`;
         console.log('正在加载壁纸:', wallpaperUrl);
         
         // 测试图片加载
