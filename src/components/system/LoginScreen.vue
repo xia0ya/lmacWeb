@@ -103,6 +103,8 @@ const setWallpaper = () => {
     }
 };
 
+
+
 // 检查本地存储中是否有有效的邀请码
 const checkStoredInviteCode = () => {
     const storedCode = localStorage.getItem(INVITE_CODE_STORAGE_KEY);
