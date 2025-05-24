@@ -91,25 +91,19 @@ const loginSuccess = ref(false);
 // 指纹相关
 const browserFingerprint = ref('');
 
-// // 设置壁纸
-// const setWallpaper = () => {
-//     // 从本地存储加载保存的壁纸
-//     const savedWallpaper = localStorage.getItem('wallpaper') || 1;
-//     // 更新桌面背景样式
-//     const desktop = document.querySelector('.login-container');
-//     if (desktop) {
-//         // 使用 import.meta.env.BASE_URL 来确保路径正确
-//         desktop.style.backgroundImage = `url('${import.meta.env.BASE_URL}assets/wallpaper/${savedWallpaper}.jpg')`;
-//     }
-// };
-
+// 设置壁纸
 const setWallpaper = () => {
-    const savedWallpaper = localStorage.getItem('wallpaper') || '1';
+    // 从本地存储加载保存的壁纸
+    const savedWallpaper = localStorage.getItem('wallpaper') || 1;
+    // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        desktop.style.backgroundImage = `url('/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg')`;
+        // Use the full GitHub Pages URL path
+        desktop.style.backgroundImage = `url('https://xia0ya.github.io/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg')`;
     }
 };
+
+
 
 // 检查本地存储中是否有有效的邀请码
 const checkStoredInviteCode = () => {
