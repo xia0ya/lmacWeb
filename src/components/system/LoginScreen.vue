@@ -98,12 +98,17 @@ const setWallpaper = () => {
     // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        // Use the full GitHub Pages URL path
-        desktop.style.backgroundImage = `url('https://xia0ya.github.io/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg')`;
+        const wallpaperUrl = `https://xia0ya.github.io/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg`;
+        console.log('正在加载壁纸:', wallpaperUrl);
+        desktop.style.backgroundImage = `url('${wallpaperUrl}')`;
+        
+        // 添加图片加载错误处理
+        const img = new Image();
+        img.onload = () => console.log('壁纸加载成功');
+        img.onerror = () => console.error('壁纸加载失败:', wallpaperUrl);
+        img.src = wallpaperUrl;
     }
 };
-
-
 
 // 检查本地存储中是否有有效的邀请码
 const checkStoredInviteCode = () => {
