@@ -95,18 +95,27 @@ const browserFingerprint = ref('');
 const setWallpaper = () => {
     // 从本地存储加载保存的壁纸
     const savedWallpaper = localStorage.getItem('wallpaper') || 1;
+    console.log('当前选择的壁纸编号:', savedWallpaper);
+    
     // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
         const wallpaperUrl = `https://xia0ya.github.io/lmacWeb/assets/wallpaper/${savedWallpaper}.jpg`;
         console.log('正在加载壁纸:', wallpaperUrl);
-        desktop.style.backgroundImage = `url('${wallpaperUrl}')`;
         
-        // 添加图片加载错误处理
+        // 测试图片加载
         const img = new Image();
-        img.onload = () => console.log('壁纸加载成功');
-        img.onerror = () => console.error('壁纸加载失败:', wallpaperUrl);
+        img.onload = () => {
+            console.log('壁纸加载成功');
+            desktop.style.backgroundImage = `url('${wallpaperUrl}')`;
+            console.log('背景图片样式已设置:', desktop.style.backgroundImage);
+        };
+        img.onerror = (error) => {
+            console.error('壁纸加载失败:', wallpaperUrl, error);
+        };
         img.src = wallpaperUrl;
+    } else {
+        console.error('未找到 .login-container 元素');
     }
 };
 
