@@ -2,7 +2,7 @@
     <div class="login-container" :class="{ 'slide-up-exit': loginSuccess }">
         <div class="login-content" :class="{ 'content-success': loadingProgress >= 100 && verificationSuccess }">
             <div class="profile-image">
-                <img src="/assets/profile.jpg" alt="用户头像" />
+                <img src="@/assets/profile.jpg" alt="用户头像" />
             </div>
             
             <div class="login-username">{{ username }}</div>
