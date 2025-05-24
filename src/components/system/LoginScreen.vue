@@ -98,7 +98,8 @@ const setWallpaper = () => {
     // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        desktop.style.backgroundImage = `url('/assets/wallpaper/${savedWallpaper}.jpg')`;
+        // 使用 import.meta.env.BASE_URL 来确保路径正确
+        desktop.style.backgroundImage = `url('${import.meta.env.BASE_URL}assets/wallpaper/${savedWallpaper}.jpg')`;
     }
 };
 
