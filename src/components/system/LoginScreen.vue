@@ -100,8 +100,8 @@ const setWallpaper = () => {
     // 更新桌面背景样式
     const desktop = document.querySelector('.login-container');
     if (desktop) {
-        // 使用public目录下的图片路径
-        const wallpaperUrl = '/lmacWeb/assets/wallpaper/' + savedWallpaper + '.jpg';
+        // 使用完整的URL路径，包含仓库名称
+        const wallpaperUrl = 'https://xia0ya.github.io/lmacWeb/assets/wallpaper/' + savedWallpaper + '.jpg';
         console.log('正在加载壁纸:', wallpaperUrl);
         
         // 测试图片加载
