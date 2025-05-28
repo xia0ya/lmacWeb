@@ -1,3 +1,5 @@
+# 说明
+这是一份学习项目，我尝试部署在gitpages并学习一些知识，此仓库留作备份。原项目链接，https://github.com/iAJue/MacWeb
 ## MacWeb
 
 在当今的 Web 开发领域，用户体验和界面设计变得越来越重要。
